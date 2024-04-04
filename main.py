@@ -3,7 +3,9 @@ import subprocess
 import time
 # file1 = subprocess.run(["ls", "-l"])
 
-for i in range(0, 100):
+
+
+while(True):
     # script = `{}`
     file1 = subprocess.run(["bash", "script.sh"])
     time.sleep(5)
