@@ -1,6 +1,9 @@
 # import os
 import subprocess
 import time
+from random import randint
+
+value = randint(0, 10)
 # file1 = subprocess.run(["ls", "-l"])
 
 
