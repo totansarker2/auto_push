@@ -10,7 +10,7 @@ from random import randint
 
 while(True):
     # script = `{}`
-    value = randint(0, 10)
+    value = randint(0, 5)
     file1 = subprocess.run(["bash", "script.sh"])
     time.sleep(value)
 
