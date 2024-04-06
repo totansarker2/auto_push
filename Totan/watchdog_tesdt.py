@@ -22,8 +22,7 @@ def git_Script():
     print("")
     commit_text = f"a20Tk{0}"
     file1 = subprocess.run(["bash", "script.sh", commit_text])
-    value = randint(3, 5)
-    time.sleep(value)
+    
 
 class MyEventHandler(FileSystemEventHandler):
     counter = 0
