@@ -40,9 +40,6 @@ class MyEventHandler(FileSystemEventHandler):
             self.counter+=1
         self.file_cache[key] = True
         if self.counter >= 1:
-            # sys.exit("Terminated watchdog")
-            # exit_program()
-            # subprocess.run('\x03')
             # os.system('\x03')
             os.kill(os.getpid(), signal.SIGINT)
 
