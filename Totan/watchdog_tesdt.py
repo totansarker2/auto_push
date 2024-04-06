@@ -29,7 +29,7 @@ class MyEventHandler(FileSystemEventHandler):
     file_cache = {}
    
     def on_modified(self, event):
-         print(file_cache)
+        print(file_cache)
         seconds = int(time.time())
         key = (seconds, event.src_path)
         if key in self.file_cache:
