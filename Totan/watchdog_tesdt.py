@@ -43,8 +43,7 @@ class MyEventHandler(FileSystemEventHandler):
         ###Terminate current session to empty file_cache
         if self.counter >= 1:
             #send control-c to terminal
-            os.system('\x03') 
-            # os.kill(os.getpid(), signal.SIGINT) #it also worked
+            os.kill(os.getpid(), signal.SIGINT) #it also worked
 
 
 
