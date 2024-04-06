@@ -44,6 +44,7 @@ class MyEventHandler(FileSystemEventHandler):
             # exit_program()
             # subprocess.run('\x03')
             # os.system('\x03')
+            os.kill()
 
 
 
