@@ -41,7 +41,7 @@ class MyEventHandler(FileSystemEventHandler):
         self.file_cache[key] = True
         
         ###Terminate current session to empty file_cache
-        if self.counter >= 1:
+        if self.counter >= 10:
             #send control-c to terminal
             os.kill(os.getpid(), signal.SIGINT) #it also worked
 
