@@ -20,6 +20,8 @@ def exit_program():
 #### Git Commands
 def git_Script():
     print("")
+    value = randint(3, 5)
+    time.sleep(value)
     commit_text = f"a20Tk{0}"
     file1 = subprocess.run(["bash", "script.sh", commit_text])
     
