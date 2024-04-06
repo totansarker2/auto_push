@@ -35,7 +35,7 @@ class MyEventHandler(FileSystemEventHandler):
             git_Script()
             self.counter+=1
         self.file_cache[key] = True
-        if self.counter >= 20:
+        if self.counter >= 2:
             sys.exit("Terminated watchdog")
 
 
