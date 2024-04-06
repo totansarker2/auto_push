@@ -29,7 +29,6 @@ class MyEventHandler(FileSystemEventHandler):
     counter = 0
     file_cache = {}
     def on_modified(self, event):
-        print(self.file_cache)
         seconds = int(time.time())
         key = (seconds, event.src_path)
         if key in self.file_cache:
@@ -42,7 +41,7 @@ class MyEventHandler(FileSystemEventHandler):
         
         ###Terminate current session to empty file_cache
         if self.counter >= 1:
-            #send control-c to t
+            #send control-c to terminal
             # os.system('\x03') #it also worked
             os.kill(os.getpid(), signal.SIGINT)
 
