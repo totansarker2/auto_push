@@ -43,7 +43,7 @@ class MyEventHandler(FileSystemEventHandler):
             # sys.exit("Terminated watchdog")
             # exit_program()
             # subprocess.run('\x03')
-            os.system('\x03')
+            # os.system('\x03')
 
 
 
