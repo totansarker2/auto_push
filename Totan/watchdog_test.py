@@ -19,13 +19,13 @@ class MyEventHandler(FileSystemEventHandler):
         git_Script()
 
     def on_created(self, event):
-        print(event.src_path, "created.")
+        # print(event.src_path, "created.")
 
     def on_moved(self, event):
-        print(event.src_path, "moved to", event.dest_path)
+        # print(event.src_path, "moved to", event.dest_path)
 
     def on_deleted(self, event):
-        print(event.src_path, "deleted.")
+        # print(event.src_path, "deleted.")
 
 
 observer = Observer()
