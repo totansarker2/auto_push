@@ -5,6 +5,7 @@ import sys
 import signal
 import subprocess
 import time
+import os
 from random import randint
 
 ##### Auto terminate Program
@@ -40,7 +41,8 @@ class MyEventHandler(FileSystemEventHandler):
         self.file_cache[key] = True
         if self.counter >= 1:
             # sys.exit("Terminated watchdog")
-            exit_program()
+            # exit_program()
+            os.kill(self.p.pid, signal.CTRL_C_EVENT)
 
 
 
