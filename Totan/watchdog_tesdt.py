@@ -1,20 +1,11 @@
 ######Import for Watchdog
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import sys
 import signal
 import subprocess
 import time
 from random import randint
 import os
-
-##### Auto terminate Program
-# def alarm_handler(signum, frame):
-#     sys.exit("Terminated watchdog")
-# signal.signal(signal.SIGALRM, alarm_handler)
-# signal.alarm(10)
-def exit_program():
-    sys.exit()
 
 
 #### Git Commands
@@ -29,7 +20,7 @@ class MyEventHandler(FileSystemEventHandler):
     file_cache = {}
    
     def on_modified(self, event):
-        print(self.file_cache)
+        # print(self.file_cache)
         seconds = int(time.time())
         key = (seconds, event.src_path)
         if key in self.file_cache:
