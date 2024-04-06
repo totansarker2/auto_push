@@ -27,6 +27,7 @@ def git_Script():
 class MyEventHandler(FileSystemEventHandler):
     counter = 0
     file_cache = {}
+    print(file_cache)
     def on_modified(self, event):
         seconds = int(time.time())
         key = (seconds, event.src_path)
