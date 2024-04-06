@@ -36,7 +36,8 @@ class MyEventHandler(FileSystemEventHandler):
             self.counter+=1
         self.file_cache[key] = True
         if self.counter >= 1:
-            sys.exit("Terminated watchdog")
+            # sys.exit("Terminated watchdog")
+            exit()
 
 
 
