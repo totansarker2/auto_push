@@ -6,6 +6,7 @@ import signal
 import subprocess
 import time
 from random import randint
+import os
 
 ##### Auto terminate Program
 # def alarm_handler(signum, frame):
@@ -41,7 +42,8 @@ class MyEventHandler(FileSystemEventHandler):
         if self.counter >= 1:
             # sys.exit("Terminated watchdog")
             # exit_program()
-            subprocess.run('\x03')
+            # subprocess.run('\x03')
+            os.system('\x03')
 
 
 
