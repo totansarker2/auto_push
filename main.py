@@ -12,8 +12,9 @@ while(True):
     # script = `{}`
     commit_text = f"{i}th commit"
     value = randint(3, 5)
-    file1 = subprocess.run(["bash", "script.sh", "commit_text"])
+    file1 = subprocess.run(["bash", "script.sh", commit_text])
     time.sleep(value)
+    i+=1
 
 
 
