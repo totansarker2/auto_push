@@ -40,7 +40,7 @@ class MyEventHandler(FileSystemEventHandler):
             self.counter+=1
         self.file_cache[key] = True
         
-        ###Terminate current session to 
+        ###Terminate current session to empty 
         if self.counter >= 1:
             # os.system('\x03')
             os.kill(os.getpid(), signal.SIGINT)
