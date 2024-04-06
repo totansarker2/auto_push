@@ -10,7 +10,7 @@ from random import randint
 i = 0
 while(True):
     # script = `{}`
-    commit_text = f"{i}th commit"
+    commit_text = f"a20Tk{i}"
     value = randint(3, 5)
     file1 = subprocess.run(["bash", "script.sh", commit_text])
     time.sleep(value)
