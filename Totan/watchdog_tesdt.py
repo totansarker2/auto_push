@@ -7,12 +7,11 @@ import time
 from random import randint
 import os
 
-
 #### Git Commands
-def git_Script():
+def git_Script(c):
     value = randint(5, 7)
     time.sleep(value)
-    commit_text = f"a20Tk{0}"
+    commit_text = f"a20Tk{c}"
     file1 = subprocess.run(["bash", "script.sh", commit_text])
 
 class MyEventHandler(FileSystemEventHandler):
@@ -27,7 +26,7 @@ class MyEventHandler(FileSystemEventHandler):
             return
         elif event.is_directory:
             # print(event)
-            git_Script()
+            git_Script(self.counter)
             self.counter+=1
         self.file_cache[key] = True
         
