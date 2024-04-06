@@ -29,13 +29,13 @@ class MyEventHandler(FileSystemEventHandler):
     counter = 0
     file_cache = {}
     def on_modified(self, event):
-        # print(self.file_cache)
+        print(self.file_cache)
         seconds = int(time.time())
         key = (seconds, event.src_path)
         if key in self.file_cache:
             return
         elif event.is_directory:
-            print(event)
+            # print(event)
             git_Script()
             self.counter+=1
         self.file_cache[key] = True
