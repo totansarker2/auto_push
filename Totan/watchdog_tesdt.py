@@ -12,6 +12,9 @@ from random import randint
 #     sys.exit("Terminated watchdog")
 # signal.signal(signal.SIGALRM, alarm_handler)
 # signal.alarm(10)
+def exit_program():
+    sys.exit()
+
 
 #### Git Commands
 def git_Script():
@@ -37,7 +40,7 @@ class MyEventHandler(FileSystemEventHandler):
         self.file_cache[key] = True
         if self.counter >= 1:
             # sys.exit("Terminated watchdog")
-            exit()
+            exit_program()
 
 
 
