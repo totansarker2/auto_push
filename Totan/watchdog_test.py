@@ -8,6 +8,7 @@ import time
 from random import randint
 
 def git_Script():
+    
     commit_text = f"a20Tk{0}"
     value = randint(5, 7)
     file1 = subprocess.run(["bash", "script.sh", commit_text])
