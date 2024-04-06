@@ -7,11 +7,12 @@ from random import randint
 # file1 = subprocess.run(["ls", "-l"])
 
 
-
+i = 0
 while(True):
     # script = `{}`
-    value = randint(0, 5)
-    file1 = subprocess.run(["bash", "script.sh"])
+    commit_text = f"{i}th commit"
+    value = randint(3, 5)
+    file1 = subprocess.run(["bash", "script.sh", "commit_text"])
     time.sleep(value)
 
 
