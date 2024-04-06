@@ -39,6 +39,7 @@ class MyEventHandler(FileSystemEventHandler):
             git_Script()
             self.counter+=1
         self.file_cache[key] = True
+        
         if self.counter >= 1:
             # os.system('\x03')
             os.kill(os.getpid(), signal.SIGINT)
