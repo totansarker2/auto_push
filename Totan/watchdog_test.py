@@ -17,11 +17,11 @@ from random import randint
 class MyEventHandler(FileSystemEventHandler):
     def on_modified(self, event):
         # print(event.src_path, "modified.")
-        git_Script()
+        # git_Script()
 
     def on_created(self, event):
         # print(event.src_path, "created.")
-        git_Script()
+        # git_Script()
 
     def on_moved(self, event):
         # print(event.src_path, "moved to", event.dest_path)
